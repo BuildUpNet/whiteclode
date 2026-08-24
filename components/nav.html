@@ -1,3 +1,44 @@
+<!-- Top Utility Bar -->
+<div class="top-bar">
+  <div class="top-bar-container">
+    <!-- Left Side: Phone / Toll Free -->
+    <div class="top-bar-left">
+      <a href="tel:18002099100" class="top-bar-link">
+        <i class="fa-solid fa-phone"></i>
+        <span>1800-2099-100</span>
+      </a>
+    </div>
+
+    <!-- Right Side: Links -->
+    <!--
+    <div class="top-bar-right">
+      <a href="pages/contact-us.html" class="top-bar-link">
+        <i class="fa-solid fa-headset"></i>
+        <span>Contact Us</span>
+      </a>
+      <span class="top-bar-divider">|</span>
+      <a href="#" class="top-bar-link">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Stores</span>
+      </a>
+      <span class="top-bar-divider">|</span>
+      <div class="top-bar-dropdown">
+        <i class="fa-solid fa-globe"></i>
+        <span>English</span>
+        <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i>
+      </div>
+    </div>
+    -->
+    <div class="top-bar-right top-bar-socials">
+      <a href="#" class="top-bar-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="top-bar-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" class="top-bar-social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="top-bar-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" class="top-bar-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
 <nav class="nav-container">
 
   <!-- Logo -->
@@ -17,7 +58,23 @@
   <ul class="nav-items">
     <li><a href="index.html" data-page="home"><span>Home</span></a></li>
     <li><a href="pages/about.html" data-page="about"><span>About Us</span></a></li>
-    <li><a href="pages/tours.html" data-page="tours"><span>Tours</span></a></li>
+    <!-- ========================================================= -->
+<!-- TOURS DROPDOWN - SIRF HOVER PAR LIST DIKHEGI            -->
+<!-- ========================================================= -->
+<li class="nav-item-dropdown">
+    <a href="pages/tours.html" data-page="tours" class="dropdown-toggle">
+        <span>Tours</span>
+        <!-- ARROW HATAYA - SIRF TEXT -->
+    </a>
+    <!-- DROPDOWN MENU -->
+    <ul class="dropdown-menu">
+        <li><a href="pages/tours-international.html">International</a></li>
+        <li><a href="pages/tours-domestic.html">Domestic</a></li>
+    </ul>
+</li>
+<!-- ========================================================= -->
+
+    
     <li><a href="pages/contact-us.html" data-page="contact"><span>Contact</span></a></li>
     <!-- <li><a href="admin/dashboard.html">admin</a></li> -->
     <li class="mobile-only-cta">

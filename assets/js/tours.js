@@ -2,6 +2,25 @@ fetch("components/nav.html")
 .then(response=>response.text())
 .then((data)=>{
     document.getElementById("nav").innerHTML=data;
+    
+    // Tours Mobile Dropdown Toggle
+    const dropdownToggle = document.querySelector('.nav-item-dropdown .dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                const dropdownItem = this.closest('.nav-item-dropdown');
+                if (dropdownItem) dropdownItem.classList.toggle('open');
+            }
+        });
+    }
+    
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            const dropdownItem = document.querySelector('.nav-item-dropdown');
+            if (dropdownItem) dropdownItem.classList.remove('open');
+        }
+    });
 })
 .catch(error=>{
      console.log("Error loading navbar:", error)

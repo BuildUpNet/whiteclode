@@ -205,9 +205,9 @@
 .cu-hero {
   position: relative;
   background: linear-gradient(135deg, #0d1b2e 0%, #0878c9 100%);
-  padding: 100px 80px 80px;
+  padding: 215px 80px 80px;
   overflow: hidden;
-  margin-top: 80px; /* clear fixed navbar */
+  margin-top: 0; /* clear absolute header */
   text-align: center;
   display: flex;
   justify-content: center;

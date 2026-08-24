@@ -18,12 +18,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-main);
 }
 
 body {
   background-color: var(--bg-page);
   color: var(--text-dark);
+  font-family: var(--font-main);
 }
 
 /* ================= TRUST BADGES BAR ================= */
