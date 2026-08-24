@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/includes/auth.php';
+
+$pageTitle = 'Dashboard';
+$pageSubtitle = 'Welcome back, ' . ($_SESSION['admin_name'] ?? 'Admin');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,69 +21,18 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../css/admin/dashboard.css">
-    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="../assets/css/admin/dashboard.css">
+    <link rel="stylesheet" href="assets/css/admin-extra.css">
+    <title>Admin Dashboard</title>
 </head>
 
 <body>
     <div class="dashboard-container">
-        <div class="sidebar-container">
-            <div class="logo">
-                <img src="../assets/images/white-cloud.png" />
-            </div>
-            <div class="sidebar-items">
-                <ul>
-                    <li><i class="fa-solid fa-house"></i><a>Dashboard</a></li>
-                    <li><i class="fa-solid fa-plane"></i><a>Tours</a></li>
-                    <li><i class="fa-solid fa-calendar-check"></i><a>Bookings</a></li>
-                    <li><i class="fa-solid fa-user"></i>Customers</li>
-                    <li><i class="fa-solid fa-star"></i>Reviews</li>
-                    <li><i class="fa-solid fa-credit-card"></i>Payments</li>
-                    <li><i class="fa-solid fa-chart-column"></i>Enquiry</li>
-                    <li><i class="fa-solid fa-gear"></i>Settings</li>
-                    <li><i class="fa-solid fa-right-from-bracket"></i>Logout</li>
-                </ul>
-            </div>
-
-        </div>
+        <?php include __DIR__ . '/includes/sidebar.php'; ?>
 
         <section class="dashboard-main">
 
-            <header class="dashboard-header">
-                <div class="header-left">
-                    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
-                    <div>
-                        <b>Dashboard</b>
-                        <p>Welcome back, Admin</p>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <!--search-->
-                    <div class="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search here..." />
-                    </div>
-
-                    <!--Notification-->
-                    <button class="notification-button">
-                        <i class="fa-regular fa-bell"></i>
-                        <span class="notification-count"> 3 </span>
-                    </button>
-
-                    <!-- Admin Profile -->
-                    <div class="admin-profile">
-                        <div class="admin-avatar">
-                            <img src="../assets/adminImg/admin.png" />
-                        </div>
-                        <div class="admin-info">
-                            <strong>Admin</strong>
-                            <span>Super Admin</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-
-                </div>
-            </header>
+            <?php include __DIR__ . '/includes/header.php'; ?>
 
             <!-- ========================= STATISTICS SECTION ======================== -->
 
@@ -357,7 +312,7 @@
 
                             <div class="review-top">
 
-                                <img src="../assets/adminImg/admin.png" alt="Rahul Sharma">
+                                <img src="assets/adminImg/admin.png" alt="Rahul Sharma">
 
                                 <div class="review-user">
 
@@ -390,7 +345,7 @@
 
                             <div class="review-top">
 
-                                <img src="../assets/adminImg/admin.png" alt="Simran Kaur">
+                                <img src="assets/adminImg/admin.png" alt="Simran Kaur">
 
                                 <div class="review-user">
 
@@ -423,7 +378,7 @@
 
                             <div class="review-top">
 
-                                <img src="../assets/adminImg/admin.png" alt="Aman Verma">
+                                <img src="assets/adminImg/admin.png" alt="Aman Verma">
 
                                 <div class="review-user">
 
@@ -457,6 +412,7 @@
             </section>
         </section>
     </div>
+    <script src="assets/js/dashboard.js"></script>
 </body>
 
 </html>

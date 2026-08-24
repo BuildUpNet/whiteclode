@@ -1,0 +1,357 @@
+/* =========================================================
+   White Clouds Admin — extra styles
+   (dropdown menu, alerts, profile & change-password forms)
+   Kept separate from the main dashboard.css so nothing
+   outside /admin needs to be touched.
+========================================================= */
+
+/* ---------- Sidebar active-page highlight ----------
+   The base dashboard.css always highlights the first sidebar item.
+   Since we can't edit that file, override it here so the highlight
+   follows the actual current page instead. */
+
+.sidebar-items ul li:first-child {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.sidebar-items ul li.active {
+    background: #087dcc !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ---------- Profile dropdown ---------- */
+
+.admin-profile {
+    position: relative;
+}
+
+.admin-dropdown {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eef1f6;
+    box-shadow: 0 16px 40px rgba(11, 37, 69, 0.14);
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    z-index: 100;
+}
+
+.admin-profile.open .admin-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.admin-profile.open > i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.admin-profile > i.fa-chevron-down {
+    transition: transform .16s ease;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #384358;
+    cursor: pointer;
+}
+
+.dropdown-item i {
+    width: 16px;
+    text-align: center;
+    color: #9aa5b8;
+    font-size: 13px;
+}
+
+.dropdown-item:hover {
+    background: #f4f7fb;
+    color: #129ed3;
+}
+
+.dropdown-item:hover i {
+    color: #129ed3;
+}
+
+.dropdown-item.logout-item {
+    color: #dc2626;
+}
+
+.dropdown-item.logout-item i {
+    color: #dc2626;
+}
+
+.dropdown-item.logout-item:hover {
+    background: #fdecec;
+    color: #dc2626;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #eef1f6;
+    margin: 6px 4px;
+}
+
+/* ---------- Flash / alert messages ---------- */
+
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.alert i {
+    font-size: 15px;
+}
+
+.alert-success {
+    background: #e6f8ee;
+    color: #16a34a;
+    border: 1px solid #bdf0d3;
+}
+
+.alert-error {
+    background: #fdecec;
+    color: #dc2626;
+    border: 1px solid #f8caca;
+}
+
+/* ---------- Settings / form pages (Profile, Change Password) ---------- */
+
+.settings-wrap {
+    padding: 26px 30px 40px;
+    max-width: 760px;
+}
+
+.settings-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #eef1f6;
+    padding: 28px;
+    margin-bottom: 22px;
+}
+
+.settings-card h3 {
+    margin: 0 0 4px;
+    font-size: 16.5px;
+    color: #0b2545;
+}
+
+.settings-card .settings-desc {
+    margin: 0 0 22px;
+    font-size: 13px;
+    color: #8a94a6;
+}
+
+.profile-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 26px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f4f6fa;
+}
+
+.profile-head img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f4f7fb;
+}
+
+.profile-head-info strong {
+    display: block;
+    font-size: 17px;
+    color: #0b2545;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-head-info span {
+    font-size: 12.5px;
+    color: #8a94a6;
+}
+
+.form-row {
+    margin-bottom: 18px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #384358;
+}
+
+.form-row input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e1e6ee;
+    border-radius: 9px;
+    outline: none;
+    font-size: 13.5px;
+    color: #1f2937;
+    background: #fbfcfe;
+    transition: border-color .15s ease, background .15s ease;
+}
+
+.form-row input:focus {
+    border-color: #129ed3;
+    background: #fff;
+}
+
+.form-row small {
+    display: block;
+    margin-top: 6px;
+    font-size: 11.5px;
+    color: #9aa5b8;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #129ed3, #0d7fb0);
+    color: #fff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 9px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(18, 158, 211, 0.28);
+}
+
+.btn-primary:hover {
+    opacity: 0.93;
+}
+
+.btn-secondary {
+    background: #f4f7fb;
+    color: #384358;
+    border: 1px solid #e1e6ee;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #eef1f6;
+}
+
+.form-row textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e1e6ee;
+    border-radius: 9px;
+    outline: none;
+    font-size: 13.5px;
+    color: #1f2937;
+    background: #fbfcfe;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color .15s ease, background .15s ease;
+}
+
+.form-row textarea:focus {
+    border-color: #129ed3;
+    background: #fff;
+}
+
+/* ---------- CMS page ---------- */
+
+.cms-wrap {
+    max-width: 900px;
+}
+
+.cms-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eef6fc;
+    color: #0d6ca8;
+    border: 1px solid #d3ecf9;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 12.5px;
+    margin-bottom: 20px;
+}
+
+.cms-note i {
+    font-size: 14px;
+}
+
+.cms-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eef1f6;
+    padding-bottom: 0;
+}
+
+.cms-tab {
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8a94a6;
+    border-radius: 9px 9px 0 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+
+.cms-tab:hover {
+    color: #129ed3;
+}
+
+.cms-tab.active {
+    color: #129ed3;
+    border-bottom: 2px solid #129ed3;
+    background: #f4faff;
+}
+
+@media (max-width: 768px) {
+    .cms-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .cms-tab {
+        white-space: nowrap;
+    }
+
+    .settings-wrap {
+        padding: 18px 16px 30px;
+    }
+
+    .settings-card {
+        padding: 20px;
+    }
+
+    .admin-dropdown {
+        right: -10px;
+    }
+}
