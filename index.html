@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/contact-form.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>White Clouds — Saving Relationships, One Vacation at a Time</title>
+</head>
+
+<body>
+    <!-- ── Hero Section ────────────────────────────────────────── -->
+    <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+        <!-- Navbar -->
+        <div id="nav"></div>
+        <div class="hero__content hero__content--center">
+            <div class="hero__text">
+                <h1>One Journey at a Time,<br>Crafted Just for You.</h1>
+                <p>Discover curated journeys designed for the modern explorer â€” unique, immersive, unforgettable.</p>
+                <div class="hero__btns">
+                    <a href="#" class="btn-teal">Plan Your Trip</a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat"><strong>12K+</strong><span>Happy Travelers</span></div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat"><strong>80+</strong><span>Destinations</span></div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat"><strong>99%</strong><span>Satisfaction</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Go & Discover Section -->
+    <section class="discover">
+        <div class="discover__left">
+            <p class="discover__tag">Go &amp; Discover</p>
+            <h2 class="discover__heading">
+                <span class="teal">Your Story Begins</span> the<br>
+                Moment You Decide to Travel
+            </h2>
+            <p class="discover__body">
+                At White Clouds, we craft personalized trips that go beyond the ordinary â€“
+                so you can focus on what truly matters: the experience.
+            </p>
+
+            <div class="discover__stats">
+                <div class="stat">
+                    <h3>12K+</h3>
+                    <p>Happy Travelers</p>
+                </div>
+                <div class="stat">
+                    <h3>80+</h3>
+                    <p>Destinations</p>
+                </div>
+                <div class="stat">
+                    <h3>99%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="discover__right">
+            <div class="discover__img-wrap">
+                <img src="https://i.pinimg.com/originals/a5/f1/ec/a5f1ec3ba100997f1ecb5ee97b2a54ca.gif"
+                    alt="Tropical destination" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel / Destinations Carousel Section -->
+    <section class="travel">
+
+        <!-- Header -->
+        <div class="travel__top">
+            <p class="travel__tag">Top Destinations</p>
+            <h2 class="travel__title">Explore the World</h2>
+            <p class="travel__desc">
+                Trade your couch for these hotspots â€” handpicked destinations where
+                every moment becomes a memory worth keeping.
+            </p>
+        </div>
+
+        <!-- Carousel wrapper -->
+        <div class="tc-root">
+            <button class="tc-btn tc-btn--prev" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="tc-viewport">
+                <div class="tc-track">
+
+                    <!-- GHOST LEFT clones of last 2 real cards -->
+                    <div class="tc-card" aria-hidden="true">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/indinesia.png" alt="" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.9</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Bali, Indonesia
+                            </div>
+                            <h3 class="tc-card__title">Indonesia Tour Packages</h3>
+                            <p class="tc-card__desc">Sun, serenity, and spirituality across the Emerald Equator's island
+                                paradise.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$849</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card" aria-hidden="true">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/montenegro.png" alt="" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.6</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Kotor, Montenegro
+                            </div>
+                            <h3 class="tc-card__title">Montenegro Tour Packages</h3>
+                            <p class="tc-card__desc">Europe's hidden gem â€” dramatic Adriatic coastline and medieval
+                                old
+                                towns.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$979</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REAL CARD 1-7-->
+                    <div class="tc-card">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/thailand.png" alt="Thailand" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.9</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Bangkok, Thailand
+                            </div>
+                            <h3 class="tc-card__title">Thailand Tour Packages</h3>
+                            <p class="tc-card__desc">For the couple that loves tropical escapes and golden temples.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$899</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/vietnam.png" alt="Vietnam" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.8</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Hanoi, Vietnam</div>
+                            <h3 class="tc-card__title">Vietnam Tour Packages</h3>
+                            <p class="tc-card__desc">For the couple who loves natural landscapes and emerald bays.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$749</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/sriLanka.png" alt="Sri Lanka" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 5.0</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Colombo, Sri Lanka
+                            </div>
+                            <h3 class="tc-card__title">Sri Lanka Tour Packages</h3>
+                            <p class="tc-card__desc">Pearl of the Indian Ocean â€” lush jungles, ancient temples &amp;
+                                pristine beaches.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$699</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/singapore.png" alt="Singapore" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.7</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Singapore City</div>
+                            <h3 class="tc-card__title">Singapore Tour Packages</h3>
+                            <p class="tc-card__desc">Where ultra-modern skylines meet vibrant multicultural street life.
+                            </p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$1,099</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/australia.png" alt="Australia" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.8</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Sydney, Australia
+                            </div>
+                            <h3 class="tc-card__title">Australia Tour Packages</h3>
+                            <p class="tc-card__desc">From the Great Barrier Reef to the iconic Opera House â€” epic
+                                adventures await.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$1,499</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/indinesia.png" alt="Indonesia" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.9</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Bali, Indonesia
+                            </div>
+                            <h3 class="tc-card__title">Indonesia Tour Packages</h3>
+                            <p class="tc-card__desc">Sun, serenity, and spirituality across the Emerald Equator's island
+                                paradise.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$849</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/montenegro.png" alt="Montenegro" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.6</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Kotor, Montenegro
+                            </div>
+                            <h3 class="tc-card__title">Montenegro Tour Packages</h3>
+                            <p class="tc-card__desc">Europe's hidden gem â€” dramatic Adriatic coastline and medieval
+                                old
+                                towns.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$979</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--GHOST RIGHT clones of first 2 real cards -->
+                    <div class="tc-card" aria-hidden="true">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/thailand.png" alt="" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.9</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Bangkok, Thailand
+                            </div>
+                            <h3 class="tc-card__title">Thailand Tour Packages</h3>
+                            <p class="tc-card__desc">For the couple that loves tropical escapes and golden temples.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$899</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tc-card" aria-hidden="true">
+                        <div class="tc-card__img-wrap">
+                            <img src="assets/images/vietnam.png" alt="" loading="lazy" />
+                            <div class="tc-card__badge"><i class="fa-solid fa-star"></i> 4.8</div>
+                        </div>
+                        <div class="tc-card__body">
+                            <div class="tc-card__location"><i class="fa-solid fa-location-dot"></i> Hanoi, Vietnam</div>
+                            <h3 class="tc-card__title">Vietnam Tour Packages</h3>
+                            <p class="tc-card__desc">For the couple who loves natural landscapes and emerald bays.</p>
+                            <div class="tc-card__footer">
+                                <span class="tc-card__price">From <strong>$749</strong></span>
+                                <a href="#" class="tc-card__link">View Itineraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.tc-track -->
+            </div><!-- /.tc-viewport -->
+
+            <button class="tc-btn tc-btn--next" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div><!-- /.tc-root -->
+
+        <div class="tc-dots" id="tcDots"></div>
+
+    </section>
+
+    <!--3 Easy Steps Section -->
+    <section class="steps">
+
+        <!-- Left: text content -->
+        <div class="steps__left">
+            <p class="steps__tag">TRAVEL TIP <span class="steps__tag-line"></span></p>
+            <h2 class="steps__heading">Book Your Next Trip In<br><span>3 Easy Steps</span></h2>
+            <p class="steps__body">
+                At White Clouds, we make travel planning effortless for every couple. Dream destinations, secure
+                bookings and unforgettable experiences â€” all in just a few steps.
+            </p>
+
+            <ul class="steps__list">
+                <li>
+                    <span class="steps__icon-box"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <div>
+                        <strong>1. CHOOSE DESTINATION</strong>
+                        <p>Pick from 100+ romantic getaways</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="steps__icon-box"><i class="fa-regular fa-calendar"></i></span>
+                    <div>
+                        <strong>2. MAKE PAYMENT</strong>
+                        <p>Safe, secure &amp; hassle-free</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="steps__icon-box"><i class="fa-solid fa-plane"></i></span>
+                    <div>
+                        <strong>3. REACH A NEW STORY</strong>
+                        <p>We handle the rest</p>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="#" class="steps__cta">EXPLORE DESTINATIONS <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Right: visual composition -->
+        <div class="steps__right">
+
+            <!-- Large circle image (main) -->
+            <div class="steps__circle-img">
+                <img src="assets/images/indinesia.png" alt="Tropical destination" />
+                <!-- Dashed circle ring -->
+                <div class="steps__ring"></div>
+                <!-- "Real Trips" badge -->
+                <div class="steps__badge-top">
+                    Real Trips<br>Real Couples<br>Real Stories<br>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <!-- Plane icon bottom -->
+                <div class="steps__plane-icon">
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+            </div>
+
+            <!-- Polaroid card 1 â€” top right -->
+            <div class="steps__polaroid steps__polaroid--top">
+                <img src="assets/images/sriLanka.png" alt="Sri Lanka" />
+                <p>Bigger Horizons <i class="fa-regular fa-heart"></i></p>
+            </div>
+
+            <!-- Polaroid card 2 â€” bottom right -->
+            <div class="steps__polaroid steps__polaroid--bottom">
+                <img src="assets/images/vietnam.png" alt="Vietnam" />
+                <p>Better Together <i class="fa-regular fa-heart"></i></p>
+            </div>
+
+            <!-- Bottom tagline -->
+            <p class="steps__tagline">
+                <span></span> SAME WORLD, MORE TOGETHER <span></span>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!--We Offer Best Services Section -->
+    <section class="services">
+        <div class="services__inner">
+
+            <!-- Header -->
+            <p class="services__tag">CATEGORY</p>
+            <h2 class="services__heading">We Offer Best Services</h2>
+
+            <!-- Cards grid -->
+            <div class="services__grid">
+
+                <!-- Card 1 Calculated Weather -->
+                <div class="services__card">
+                    <div class="services__icon-wrap services__icon-wrap--blue">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h3 class="services__title">Calculated Weather</h3>
+                    <p class="services__desc">Built Wicket longer admire do barton vanity itself do in average do it.
+                    </p>
+                </div>
+
+                <!-- Card 2 Best Flights -->
+                <div class="services__card services__card--active">
+                    <div class="services__icon-wrap services__icon-wrap--pink">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3 class="services__title">Best Flights</h3>
+                    <p class="services__desc">Engrossed listening. Park gate sell they west hard for the.</p>
+                </div>
+
+                <!-- Card 3 Local Events -->
+                <div class="services__card">
+                    <div class="services__icon-wrap services__icon-wrap--pink">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                    </div>
+                    <h3 class="services__title">Local Events</h3>
+                    <p class="services__desc">Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+                </div>
+
+                <!-- Card 4 Customization -->
+                <div class="services__card">
+                    <div class="services__icon-wrap services__icon-wrap--blue">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <h3 class="services__title">Customization</h3>
+                    <p class="services__desc">We deliver outsourced aviation services for military customers.</p>
+                </div>
+
+            </div><!-- /.services__grid -->
+        </div>
+    </section>
+
+    <!--Shared gradient wrapper: Testimonials + News + Contact -->
+    <div class="gradient-wrap">
+        <section class="testi">
+
+            <!-- Cloudy background blobs -->
+            <div class="testi__bg">
+                <div class="testi__cloud testi__cloud--tl"></div>
+                <div class="testi__cloud testi__cloud--tr"></div>
+                <div class="testi__cloud testi__cloud--bl"></div>
+            </div>
+
+            <div class="testi__inner">
+
+                <!-- Header -->
+                <div class="testi__header">
+                    <p class="testi__tag">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Testimonials &amp; Reviews
+                        <i class="fa-solid fa-paper-plane fa-flip-horizontal"></i>
+                    </p>
+                    <h2 class="testi__title">
+                        Loved by Couples,<br>
+                        <span>Made for Memories.</span>
+                    </h2>
+                    <p class="testi__sub">
+                        Real stories from couples who explored the world with us and<br>
+                        created moments they'll cherish forever.
+                    </p>
+                </div>
+
+                <!-- Cards row -->
+                <div class="testi__cards">
+
+                    <!-- Card 1 lavender, tilted left -->
+                    <div class="testi__card testi__card--left">
+                        <div class="testi__top">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma"
+                                class="testi__avatar" />
+                            <div>
+                                <strong class="testi__name">Alex &amp; Emma</strong>
+                                <span class="testi__trip">Thailand Trip Â· July 2026</span>
+                            </div>
+                        </div>
+                        <div class="testi__stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi__text">
+                            Everything was perfectly planned. From the beautiful beaches to the little experiences we
+                            never expected, this trip gave us memories we'll cherish forever. Great value for money!
+                        </p>
+                        <span class="testi__bigquote">"</span>
+                    </div>
+
+                    <!-- Card 2 white, center / raised -->
+                    <div class="testi__card testi__card--center">
+                        <div class="testi__top">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Daniel"
+                                class="testi__avatar" />
+                            <div>
+                                <strong class="testi__name">Sarah &amp; Daniel</strong>
+                                <span class="testi__trip">Bali, Indonesia Â· June 2026</span>
+                            </div>
+                        </div>
+                        <div class="testi__stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi__text">
+                            Our Bali honeymoon was absolutely magical. The itinerary gave us the perfect balance of
+                            adventure, relaxation and romantic moments. Will definitely book again.
+                        </p>
+                        <span class="testi__bigquote">"</span>
+                    </div>
+
+                    <!-- Card 3 cream, tilted right -->
+                    <div class="testi__card testi__card--right">
+                        <div class="testi__top">
+                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Ryan"
+                                class="testi__avatar" />
+                            <div>
+                                <strong class="testi__name">Ryan &amp; Mia</strong>
+                                <span class="testi__trip">Vietnam Trip Â· May 2026</span>
+                            </div>
+                        </div>
+                        <div class="testi__stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="testi__text">
+                            We wanted something different and Vietnam exceeded every expectation. The food, scenery and
+                            experiences were unforgettable. 10/10 experience.
+                        </p>
+                        <span class="testi__bigquote">"</span>
+                    </div>
+
+                </div><!-- /.testi__cards -->
+
+                <!-- Bottom rating bar -->
+                <div class="testi__rating-bar">
+                    <div class="testi__rating-score">
+                        <i class="fa-solid fa-star testi__rating-star"></i>
+                        <span class="testi__rating-num">4.9<span class="testi__rating-denom">/5</span></span>
+                    </div>
+                    <div class="testi__rating-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi__rating-label">Based on 500+ happy couples</p>
+                </div>
+
+            </div><!-- /.testi__inner -->
+        </section>
+
+        <!--Travel News Section -->
+        <section class="news">
+            <div class="news__header">
+                <div>
+                    <p class="news__tag">Travel News</p>
+                    <h2 class="news__heading">Stories From <span>The Road.</span></h2>
+                </div>
+                <a href="#" class="news__view-all">View All Stories â†’</a>
+            </div>
+
+            <div class="news__grid">
+
+                <!-- Card 1 -->
+                <article class="news__card">
+                    <div class="news__img-wrap">
+                        <img src="assets/images/indinesia.png" alt="Bali" loading="lazy" />
+                        <span class="news__label">TRAVEL GUIDE</span>
+                    </div>
+                    <div class="news__body">
+                        <p class="news__date"><i class="fa-regular fa-calendar"></i> August 08, 2026</p>
+                        <h3 class="news__title">7 Romantic Things to Do in Bali With Your Partner</h3>
+                        <p class="news__excerpt">Discover hidden beaches, sunset dinners and unforgettable experiences
+                            for two.</p>
+                        <a href="#" class="news__read">Read Story â†’</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="news__card">
+                    <div class="news__img-wrap">
+                        <img src="assets/images/thailand.png" alt="Thailand" loading="lazy" />
+                        <span class="news__label">INSPIRATION</span>
+                    </div>
+                    <div class="news__body">
+                        <p class="news__date"><i class="fa-regular fa-calendar"></i> August 04, 2026</p>
+                        <h3 class="news__title">Why Thailand Should Be Your Next Couple's Escape</h3>
+                        <p class="news__excerpt">Beaches, temples, food and adventures await.</p>
+                        <a href="#" class="news__read">Read Story â†’</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="news__card">
+                    <div class="news__img-wrap">
+                        <img src="assets/images/vietnam.png" alt="Vietnam" loading="lazy" />
+                        <span class="news__label">DESTINATIONS</span>
+                    </div>
+                    <div class="news__body">
+                        <p class="news__date"><i class="fa-regular fa-calendar"></i> July 29, 2026</p>
+                        <h3 class="news__title">Vietnam: The Perfect Mix of Adventure &amp; Romance</h3>
+                        <p class="news__excerpt">Explore emerald bays, ancient towns and incredible local cuisine.</p>
+                        <a href="#" class="news__read">Read Story â†’</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <div id="contact"></div>
+
+    </div><!-- /.gradient-wrap -->
+
+    <!-- Auto-Popup Contact Form (Modal) -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box" id="popupBox">
+            <button class="popup-close" id="popupCloseBtn" aria-label="Close popup">&times;</button>
+            <div class="popup-header">
+                <h3 class="popup-title">Plan Your Dream Trip</h3>
+                <p class="popup-subtitle">Fill out the form below and we'll craft the perfect itinerary for you.</p>
+            </div>
+            <form class="contact__form" onsubmit="return false;">
+
+                <div class="contact__row">
+                    <div class="contact__field">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Enter first name" />
+                    </div>
+                    <div class="contact__field">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Enter last name" />
+                    </div>
+                </div>
+
+                <div class="contact__row">
+                    <div class="contact__field">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter email address" />
+                    </div>
+                    <div class="contact__field">
+                        <label>Contact Number</label>
+                        <input type="tel" placeholder="+91 | 000 000 0000" />
+                    </div>
+                </div>
+
+                <div class="contact__field contact__field--full">
+                    <label>Destinations</label>
+                    <select>
+                        <option value="" disabled selected>Select destination</option>
+                        <option>Bali, Indonesia</option>
+                        <option>Bangkok, Thailand</option>
+                        <option>Colombo, Sri Lanka</option>
+                        <option>Hanoi, Vietnam</option>
+                        <option>Sydney, Australia</option>
+                        <option>Singapore City</option>
+                        <option>Kotor, Montenegro</option>
+                    </select>
+                </div>
+
+                <div class="contact__row">
+                    <div class="contact__field">
+                        <label>Date From</label>
+                        <input type="date" />
+                    </div>
+                    <div class="contact__field">
+                        <label>Date To</label>
+                        <input type="date" />
+                    </div>
+                </div>
+
+                <div class="contact__field contact__field--full">
+                    <label>Any Additional Or Message For Us?</label>
+                    <textarea rows="4" placeholder="Write Message"></textarea>
+                </div>
+
+                <button type="submit" class="contact__submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

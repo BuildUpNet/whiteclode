@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/nav.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+</head>
+<body class="blog-page-body">
+
+  <!-- Navbar -->
+  <div id="nav"></div>
+  <div style="height:80px;"></div>
+
+  <!-- ================= 2. HERO / LATEST BLOGS SECTION ================= -->
+  <main class="blog-main-container">
+    <h1 class="cursive-heading blog-title">Latest Travel Blogs</h1>
+
+    <div class="blogs-grid-layout">
+      
+      <!-- LEFT SIDE: Big Featured Blog Card -->
+      <a href="#" class="blog-card featured-blog">
+        <div class="blog-img-large">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Luxury Countries" />
+        </div>
+        <div class="blog-content">
+          <div class="author-info">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Srishti" class="author-avatar" />
+            <span class="author-name">Srishti Chhokar <small>(Travel Enthusiast)</small></span>
+          </div>
+          <h2>7 Luxury Countries to Visit in November</h2>
+          <p class="blog-snippet">
+            Discover 7 luxury holiday destinations for couples this November. From Italy to Japan, get full budget breakdowns and updated visa details for Indians.
+          </p>
+          <span class="blog-date">August 12, 2026</span>
+        </div>
+      </a>
+
+      <!-- RIGHT SIDE: Stacked Smaller Blog Cards -->
+      <div class="blog-stack">
+        
+        <!-- Small Card 1 -->
+        <a href="#" class="blog-card small-blog">
+        <div class="blog-thumb-small">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=400&q=80" alt="Travel Compass" />
+        </div>
+          <div class="blog-content-small">
+            <div class="author-info-small">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Srishti" class="author-avatar-small" />
+              <span class="author-name-small">Srishti Chhokar <small>(Travel Enthusiast)</small></span>
+            </div>
+            <h3>10 Best Places to Visit in September 2026 for Couples</h3>
+            <p class="blog-snippet-small">Find the best places to visit in September for romantic escapes...</p>
+            <span class="blog-date-small">August 12, 2026</span>
+          </div>
+        </a>
+
+        <!-- Small Card 2 -->
+        <a href="#" class="blog-card small-blog">
+          <div class="blog-thumb-small">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=400&q=80" alt="New Zealand vs Australia" />
+          </div>
+          <div class="blog-content-small">
+            <div class="author-info-small">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi" class="author-avatar-small" />
+              <span class="author-name-small">Pakhi Gupta</span>
+            </div>
+            <h3>New Zealand vs Australia in May: Which One is Better?</h3>
+            <p class="blog-snippet-small">Planning a May vacation? Compare New Zealand and Australia...</p>
+            <span class="blog-date-small">August 12, 2026</span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= 3. ALL TRAVEL ARTICLES & CATEGORIES ================= -->
+<section class="all-articles-section">
+  <div class="section-container">
+    <h2 class="cursive-heading">Explore All Travel Guides</h2>
+
+    <!-- 1. Buttons me data-category add kiya gaya hai -->
+    <div class="blog-filter-bar">
+      <button class="filter-pill active" data-category="all">All Articles</button>
+      <button class="filter-pill" data-category="honeymoon">Honeymoon Guides</button>
+      <button class="filter-pill" data-category="bali">Bali</button>
+      <button class="filter-pill" data-category="thailand">Thailand</button>
+      <button class="filter-pill" data-category="vietnam">Vietnam</button>
+      <button class="filter-pill" data-category="maldives">Maldives</button>
+    </div>
+
+    <!-- 3-Column Blog Cards Grid -->
+    <div class="all-blogs-grid">
+
+      <!-- Card 1: Bali & Honeymoon -->
+      <a href="#" class="grid-blog-card" data-category="bali honeymoon">
+        <div class="grid-card-img">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali Guide" />
+          <span class="category-badge">Bali</span>
+        </div>
+        <div class="grid-card-body">
+          <div class="author-info-small">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Srishti" class="author-avatar-small" />
+            <span class="author-name-small">Srishti Chhokar</span>
+          </div>
+          <h3>Ultimate 7-Day Bali Honeymoon Itinerary for Indian Couples</h3>
+          <p>From Ubud rice terraces to private sunset dinners in Seminyak, here is the complete day-by-day plan.</p>
+          <div class="card-footer-meta">
+            <span>August 10, 2026</span>
+            <span>• 5 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2: Vietnam -->
+      <a href="#" class="grid-blog-card" data-category="vietnam">
+        <div class="grid-card-img">
+          <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Vietnam Budget" />
+          <span class="category-badge">Vietnam</span>
+        </div>
+        <div class="grid-card-body">
+          <div class="author-info-small">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi" class="author-avatar-small" />
+            <span class="author-name-small">Pakhi Gupta</span>
+          </div>
+          <h3>How to Plan a Budget Vietnam Couple Trip Under ₹50,000</h3>
+          <p>Complete cost breakdown covering flights, Ha Long Bay cruise, stay in Da Nang, and visa requirements.</p>
+          <div class="card-footer-meta">
+            <span>August 08, 2026</span>
+            <span>• 7 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3: Maldives & Honeymoon -->
+      <a href="#" class="grid-blog-card" data-category="maldives honeymoon">
+        <div class="grid-card-img">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80" alt="Maldives Villa" />
+          <span class="category-badge">Maldives</span>
+        </div>
+        <div class="grid-card-body">
+          <div class="author-info-small">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Kamlesh" class="author-avatar-small" />
+            <span class="author-name-small">Kamlesh Sharma</span>
+          </div>
+          <h3>Water Villa vs Beach Villa in Maldives: Which Should You Choose?</h3>
+          <p>Comparing prices, privacy, ocean access, and photo spots to help you pick the perfect resort room.</p>
+          <div class="card-footer-meta">
+            <span>August 05, 2026</span>
+            <span>• 4 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4: Thailand -->
+      <a href="#" class="grid-blog-card" data-category="thailand">
+        <div class="grid-card-img">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=600&q=80" alt="Thailand Islands" />
+          <span class="category-badge">Thailand</span>
+        </div>
+        <div class="grid-card-body">
+          <div class="author-info-small">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Srishti" class="author-avatar-small" />
+            <span class="author-name-small">Srishti Chhokar</span>
+          </div>
+          <h3>Top 7 Romantic Dining & Candlelight Spots in Krabi & Phuket</h3>
+          <p>Make your evening special with cliffside dinners and private beach setups for your partner.</p>
+          <div class="card-footer-meta">
+            <span>August 02, 2026</span>
+            <span>• 6 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 5: Sri Lanka & Honeymoon -->
+      <a href="#" class="grid-blog-card" data-category="srilanka honeymoon">
+        <div class="grid-card-img">
+          <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=600&q=80" alt="Sri Lanka" />
+          <span class="category-badge">Sri Lanka</span>
+        </div>
+        <div class="grid-card-body">
+          <div class="author-info-small">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi" class="author-avatar-small" />
+            <span class="author-name-small">Pakhi Gupta</span>
+          </div>
+          <h3>Sri Lanka Honeymoon Guide: Train Ride in Ella to Bentota Beaches</h3>
+          <p>Everything you need to know about weather, local transfers, tea gardens, and wildlife safaris.</p>
+          <div class="card-footer-meta">
+            <span>July 28, 2026</span>
+            <span>• 8 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 6: New Zealand -->
+      <a href="#" class="grid-blog-card" data-category="newzealand">
+        <div class="grid-card-img">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="New Zealand" />
+          <span class="category-badge">New Zealand</span>
+        </div>
+        <div class="grid-card-body">
+          <div class="author-info-small">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Kamlesh" class="author-avatar-small" />
+            <span class="author-name-small">Kamlesh Sharma</span>
+          </div>
+          <h3>Road Tripping New Zealand South Island: A Couple's Dream</h3>
+          <p>Self-drive guide through Queenstown, Milford Sound, Mount Cook, and thermal spas in Rotorua.</p>
+          <div class="card-footer-meta">
+            <span>July 22, 2026</span>
+            <span>• 10 min read</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  
+
+  <!-- ================= PLACES TO VISIT SECTION (WITH WORKING FILTERS) ================= -->
+  <section class="places-visit-section">
+    <div class="blog-main-container">
+      <h2 class="cursive-heading blog-title">Places to visit</h2>
+
+      <!-- Horizontal Scrollable Month Filter Pills -->
+      <div class="month-filter-wrapper">
+        <button class="month-pill active" data-month="all">All</button>
+        <button class="month-pill" data-month="january">January</button>
+        <button class="month-pill" data-month="february">February</button>
+        <button class="month-pill" data-month="march">March</button>
+        <button class="month-pill" data-month="april">April</button>
+        <button class="month-pill" data-month="may">May</button>
+        <button class="month-pill" data-month="june">June</button>
+        <button class="month-pill" data-month="july">July</button>
+        <button class="month-pill" data-month="august">August</button>
+        <button class="month-pill" data-month="september">September</button>
+        <button class="month-pill" data-month="october">October</button>
+        <button class="month-pill" data-month="november">November</button>
+        <button class="month-pill" data-month="december">December</button>
+      </div>
+
+      <!-- Asymmetrical Photo Cards Grid Container -->
+      <div class="places-grid-layout" id="placesGrid">
+        
+        <!-- Large Featured Left Card -->
+        <a href="#" class="place-card big-card" data-month="february">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Girl in Field" />
+          <div class="place-card-overlay">
+            <div class="place-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi Gupta" />
+              <span>By Pakhi Gupta</span>
+            </div>
+            <h3>Cheap Countries to Visit in February 2026</h3>
+            <span class="place-date">June 29, 2026</span>
+          </div>
+        </a>
+
+        <!-- Middle Column Stacked Cards -->
+        <div class="places-stack-col">
+          <a href="#" class="place-card small-place-card" data-month="july">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=500&q=80" alt="Luxury City" />
+            <div class="place-card-overlay">
+              <div class="place-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi" />
+                <span>By Pakhi Gupta</span>
+              </div>
+              <h3>Luxury Countries to visit in Fe...</h3>
+              <span class="place-date">July 4, 2026</span>
+            </div>
+          </a>
+
+          <a href="#" class="place-card small-place-card" data-month="june">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=500&q=80" alt="Airplane Flight" />
+            <div class="place-card-overlay">
+              <div class="place-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi" />
+                <span>By Pakhi Gupta</span>
+              </div>
+              <h3>Best Countries for a 5 Days T...</h3>
+              <span class="place-date">June 29, 2026</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right Column Stacked Cards -->
+        <div class="places-stack-col">
+          <a href="#" class="place-card small-place-card" data-month="june">
+            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=500&q=80" alt="Traveler Backpack" />
+            <div class="place-card-overlay">
+              <div class="place-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi" />
+                <span>By Pakhi Gupta</span>
+              </div>
+              <h3>Best Countries for 4 days trip...</h3>
+              <span class="place-date">June 29, 2026</span>
+            </div>
+          </a>
+
+          <a href="#" class="place-card small-place-card" data-month="june">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=500&q=80" alt="Passport Travel" />
+            <div class="place-card-overlay">
+              <div class="place-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi" />
+                <span>By Pakhi Gupta</span>
+              </div>
+              <h3>Best Countries for a 6 Days T...</h3>
+              <span class="place-date">June 29, 2026</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ITINERARY PLANNING GUIDE SECTION ================= -->
+<section class="itinerary-section">
+  <div class="blog-main-container">
+    <h2 class="cursive-heading blog-title">Itinerary Planning Guide</h2>
+
+    <div class="itinerary-slider-wrapper">
+      <!-- Left Slide Button -->
+      <button class="slide-btn left-btn" id="itinPrevBtn">&#10094;</button>
+
+      <!-- Slider Visible Container -->
+      <div class="itinerary-slider-container">
+        <div class="itinerary-cards-track" id="itinTrack">
+
+          <!-- Card 1 -->
+          <a href="#" class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Couple on beach" />
+            </div>
+            <div class="itinerary-card-body">
+              <div class="itinerary-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi Gupta" />
+                <span>By Pakhi Gupta</span>
+              </div>
+              <h3>Budget-Friendly New Zealand Itinera...</h3>
+              <p>Explore New Zealand without overspe...</p>
+              <span class="itinerary-date">August 11, 2026</span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="#" class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="New Zealand landscape" />
+            </div>
+            <div class="itinerary-card-body">
+              <div class="itinerary-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Pakhi Gupta" />
+                <span>By Pakhi Gupta</span>
+              </div>
+              <h3>Best Time to Visit New Zealand from I...</h3>
+              <p>Discover the best time to visit New Ze...</p>
+              <span class="itinerary-date">August 13, 2026</span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="#" class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="https://images.unsplash.com/photo-1507034589631-9433cc6bc453?auto=format&fit=crop&w=600&q=80" alt="Thermometer in sand" />
+            </div>
+            <div class="itinerary-card-body">
+              <div class="itinerary-author">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="Vaibhav Surana" />
+                <span>By Vaibhav Surana</span>
+              </div>
+              <h3>Sri Lanka Honeymoon Guide: The Bes...</h3>
+              <p>Explore the best time to visit Sri Lanka ...</p>
+              <span class="itinerary-date">August 10, 2026</span>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="#" class="itinerary-card">
+            <div class="itinerary-img-box">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali Itinerary" />
+            </div>
+            <div class="itinerary-card-body">
+              <div class="itinerary-author">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Srishti Chhokar" />
+                <span>By Srishti Chhokar</span>
+              </div>
+              <h3>7 Days Romantic Bali Itinerary for Couples</h3>
+              <p>Explore the best villas and scenic tours in Bali...</p>
+              <span class="itinerary-date">August 08, 2026</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Right Slide Button -->
+      <button class="slide-btn right-btn" id="itinNextBtn">&#10095;</button>
+    </div>
+
+    <!-- Center Pink View All Button -->
+    <div class="view-all-container">
+      <a href="#" class="view-all-btn">View All Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISA GUIDE SECTION ================= -->
+<section class="visa-guide-section">
+  <div class="blog-main-container">
+    <h2 class="cursive-heading blog-title">Visa Guide</h2>
+
+    <div class="visa-slider-wrapper">
+      <!-- Left Slide Button -->
+      <button class="slide-btn left-btn" id="visaPrevBtn">&#10094;</button>
+
+      <!-- Slider Container -->
+      <div class="visa-slider-container">
+        <div class="visa-cards-track" id="visaTrack">
+
+          <!-- Card 1: Vietnam -->
+          <a href="#" class="visa-card">
+            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Vietnam" />
+            <div class="visa-card-overlay">
+              <h3>Vietnam Tour Packages</h3>
+            </div>
+          </a>
+
+          <!-- Card 2: Maldives -->
+          <a href="#" class="visa-card">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80" alt="Maldives" />
+            <div class="visa-card-overlay">
+              <h3>Maldives Holiday Packages for Couples</h3>
+            </div>
+          </a>
+
+          <!-- Card 3: New Zealand -->
+          <a href="#" class="visa-card">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="New Zealand" />
+            <div class="visa-card-overlay">
+              <h3>New Zealand Tour Packages</h3>
+            </div>
+          </a>
+
+          <!-- Card 4: Sri Lanka -->
+          <a href="#" class="visa-card">
+            <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=600&q=80" alt="Sri Lanka" />
+            <div class="visa-card-overlay">
+              <h3>Sri Lanka Tour Packages</h3>
+            </div>
+          </a>
+
+          <!-- Card 5: Bali -->
+          <a href="#" class="visa-card">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali" />
+            <div class="visa-card-overlay">
+              <h3>Bali Tour Packages</h3>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Right Slide Button -->
+      <button class="slide-btn right-btn" id="visaNextBtn">&#10095;</button>
+    </div>
+
+    <!-- Center Pink View All Button -->
+    <div class="view-all-container">
+      <a href="#" class="view-all-btn">View All</a>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= 4. CTA NEWSLETTER / ITINERARY BANNER ================= -->
+  <section class="blog-cta-section">
+    <div class="cta-banner-card">
+      <div class="cta-content">
+        <h2>Planning a Romantic Couple Trip?</h2>
+        <p>Get a customized 100% free itinerary designed for two directly on WhatsApp.</p>
+      </div>
+      <button class="cta-action-btn">Get Free Itinerary →</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="../js/blog.js"></script>
+</body>
+</html>
