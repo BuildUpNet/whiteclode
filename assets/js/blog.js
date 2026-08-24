@@ -6,11 +6,30 @@ fetch(BASE + "components/nav.html")
     document.getElementById("nav").innerHTML = data;
     const logo = document.querySelector(".nav-logo img");
     if (logo) logo.src = BASE + "assets/images/white-cloud.png";
-    document.querySelectorAll('.nav-items a, .contact-btn').forEach(a => {
+    document.querySelectorAll('.nav-items a, .contact-btn, .top-bar-link').forEach(a => {
       const href = a.getAttribute('href');
-      if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('../')) {
+      if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('../') && !href.startsWith('tel:')) {
         a.setAttribute('href', BASE + href);
       }
+    });
+    
+    // Tours Mobile Dropdown Toggle
+    const dropdownToggle = document.querySelector('.nav-item-dropdown .dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                const dropdownItem = this.closest('.nav-item-dropdown');
+                if (dropdownItem) dropdownItem.classList.toggle('open');
+            }
+        });
+    }
+    
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            const dropdownItem = document.querySelector('.nav-item-dropdown');
+            if (dropdownItem) dropdownItem.classList.remove('open');
+        }
     });
 })
 .catch(error => console.log("Error loading navbar:", error));

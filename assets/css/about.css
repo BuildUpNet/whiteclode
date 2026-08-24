@@ -48,7 +48,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 80px; /* clear fixed navbar */
+  margin-top: 0; /* clear absolute header */
   overflow: hidden;
 }
 

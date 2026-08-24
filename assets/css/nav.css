@@ -4,6 +4,111 @@
   --white:      #ffffff;
 }
 
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Top Bar Container */
+.top-bar {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #4b5563;
+    z-index: 1001;
+}
+
+.top-bar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left & Right Flex Groups */
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Social icons styling */
+.top-bar-socials {
+    gap: 16px !important;
+}
+
+.top-bar-social-link {
+    color: #4b5563;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar-social-link:hover {
+    color: #0284c7;
+    transform: translateY(-1.5px);
+}
+
+/* Links & Text */
+.top-bar-link {
+    color: #374151;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.top-bar-link i,
+.top-bar-dropdown i {
+    font-size: 12px;
+    color: #1f2937;
+}
+
+.top-bar-link:hover,
+.top-bar-dropdown:hover {
+    color: #0284c7; /* Brand blue on hover */
+}
+
+/* Divider Line */
+.top-bar-divider {
+    color: #d1d5db;
+    font-size: 12px;
+    user-select: none;
+}
+
+/* Dropdown */
+.top-bar-dropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* Responsive Hide for Mobile */
+@media (max-width: 768px) {
+    .top-bar-right {
+        display: none;
+    }
+    .top-bar-container {
+        justify-content: center;
+    }
+}
+
 /* Hamburger Toggle Hide on Desktop */
 .nav-menu-toggle-cb {
   display: none;
@@ -20,33 +125,21 @@
 /* ── Navbar ─── */
 
 .nav-container {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-
+    position: relative;
     z-index: 1000;
-
     width: calc(100% - 100px);
     height: 60px;
-
-    margin: 0;
-
+    margin: 12px auto 0 auto;
     padding: 8px 12px 8px 22px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: rgba(255, 255, 255, 0.92);
-
     border: 2px solid rgba(0, 90, 158, 0.12);
     border-radius: 24px;
-
     box-shadow:
         0 15px 35px rgba(84, 95, 111, 0.1),
         0 3px 10px rgba(13, 27, 46, 0.05);
-
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 }
@@ -313,19 +406,30 @@
   }
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .nav-items a {
     position: relative !important;
     overflow: visible !important;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+  } */
+
+  @media (min-width: 992px) {
+  .nav-items a {
+    position: relative !important;
+    overflow: hidden !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    min-width: auto;
   }
 
   .nav-items a span {
     position: relative;
     display: inline-block;
-    overflow: visible;
+    padding: 0 6px;
   }
 
   /* Underline effect on hover (relative to the text size) */
@@ -349,35 +453,62 @@
   .nav-items a.active span::after {
     background-color: var(--white);
   }
-
-  /* Airplane glide/take-off animation on hover */
-  .nav-items a span::before {
+  
+  /* .nav-items a span::before {
     content: '✈';
     position: absolute;
-    left: 0;
-    bottom: 0px;
-    font-size: 11px;
+    font-size: 10px;
     color: var(--blue);
     opacity: 0;
-    transform: translate(-4px, 4px) rotate(15deg) scale(0.8);
-    /* Transition for hover-out (smooth fade out over 0.4s without aggressive snap) */
-    transition: all 0.4s ease;
     pointer-events: none;
     z-index: 2;
+    right: -15px; 
+    top: 50%;
+    transform: translateY(-50%) scale(0) rotate(0deg);
+    transition: all 0.5s ease;
+    
   }
-
   .nav-items a:hover span::before {
-    left: 100%;
-    bottom: 85%;
     opacity: 1;
-    transform: translate(100%, -60%) rotate(25deg) scale(1);
-    /* Transition for hover-in (soft glide taking 0.8s to 1.0s) */
-    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    right: -25px;
+    transform: translateY(-20px) scale(1) rotate(15deg);
+    transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 
   .nav-items a.active span::before {
     color: var(--white);
+  } */
+
+  .nav-items a::before {
+    content: '✈';
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    font-size: 11px;
+    color: var(--blue);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transform: rotate(25deg) scale(0.4);
+   
+    transition: 
+      bottom 0.7s cubic-bezier(0.25, 0.8, 0.25, 1), 
+      left 0.7s cubic-bezier(0.25, 0.8, 0.25, 1), 
+      opacity 0.5s ease-in-out, 
+      transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
+
+  .nav-items a:hover::before {
+    opacity: 1;
+    bottom: calc(100% - 15px);
+    left: calc(100% - 25px);
+    transform: rotate(25deg) scale(1.1);
+  }
+  .nav-items a.active::before {
+    color: var(--white);
+  }
+
+  
 }
 
 .nav-menu-toggle-cb {
@@ -413,4 +544,177 @@
 }
 
 
+/*DROPDOWN MENU FOR "TOURS"*/
 
+/* --- 1. Container for the dropdown item --- */
+.nav-item-dropdown {
+    position: relative;
+    list-style: none;
+}
+
+/* --- 2. The "Tours" link itself (no arrow) --- */
+.nav-item-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+/* --- 3. Dropdown menu (hidden by default) --- */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 2px solid rgba(0, 90, 158, 0.12);
+    border-radius: 16px;
+    padding: 10px 0;
+    min-width: 200px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0 20px 50px rgba(13, 27, 46, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1000;
+}
+
+/* Invisible hover bridge to prevent menu from disappearing */
+.dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: transparent;
+    z-index: 1;
+}
+
+/* --- 4. Show dropdown on hover --- */
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --- 5. Dropdown items --- */
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #0d1b2e;
+    text-decoration: none;
+    border-radius: 0;
+    background: transparent;
+    transition: all 0.25s ease;
+    min-width: auto;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(8, 120, 201, 0.08);
+    color: var(--blue);
+    padding-left: 32px;
+}
+
+.dropdown-menu li:first-child a {
+    border-radius: 14px 14px 0 0;
+}
+
+.dropdown-menu li:last-child a {
+    border-radius: 0 0 14px 14px;
+}
+
+/* --- 6. Small arrow/triangle on top of dropdown --- */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 2px solid rgba(0, 90, 158, 0.12);
+    border-left: 2px solid rgba(0, 90, 158, 0.12);
+    border-radius: 4px 0 0 0;
+    z-index: -1;
+}
+
+/*MOBILE RESPONSIVE DROPDOWN */
+
+@media (max-width: 991px) {
+    .nav-item-dropdown {
+        position: relative;
+    }
+
+    .nav-item-dropdown .dropdown-toggle {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Dropdown becomes an accordion on mobile */
+    .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        background: rgba(245, 248, 255, 0.6);
+        border: none;
+        border-radius: 12px;
+        padding: 0;
+        min-width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+        margin-top: 0;
+    }
+
+    /* Open state when 'open' class is added via JS */
+    .nav-item-dropdown.open .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        max-height: 300px;
+        padding: 8px 0;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 20px 10px 40px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-menu li a:hover {
+        padding-left: 48px;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+}
+
+/* Bootstrap dropdown overrides */
+.nav-container .dropdown-menu {
+    display: block !important;
+}
+.nav-container .dropdown-toggle::after {
+    display: none !important;
+}
