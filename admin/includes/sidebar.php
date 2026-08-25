@@ -8,7 +8,9 @@
             <li class="<?= $activePage === 'dashboard.php' ? 'active' : '' ?>">
                 <i class="fa-solid fa-house"></i><a href="dashboard.php">Dashboard</a>
             </li>
-            <li><i class="fa-solid fa-plane"></i><a>Tours</a></li>
+            <li class="<?= $activePage === 'categories.php' ? 'active' : '' ?>">
+                <i class="fa-solid fa-plane"></i><a href="categories.php">Tours</a>
+            </li>
             <li><i class="fa-solid fa-calendar-check"></i><a>Bookings</a></li>
             <li><i class="fa-solid fa-user"></i>Customers</li>
             <li><i class="fa-solid fa-star"></i>Reviews</li>

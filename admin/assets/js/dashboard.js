@@ -46,4 +46,50 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Hero media upload — quick client-side check so users get instant feedback.
+    // The real, authoritative check always happens on the server.
+    const heroInput = document.getElementById('hero_media');
+    const heroForm = document.getElementById('heroUploadForm');
+    const heroMsg = document.getElementById('heroFileMsg');
+
+    if (heroInput && heroForm && heroMsg) {
+        const allowedExt = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'mp4', 'webm'];
+        const maxImageMB = 8;
+        const maxVideoMB = 60;
+        const defaultMsg = heroMsg.textContent;
+
+        heroInput.addEventListener('change', function () {
+            heroMsg.classList.remove('field-error');
+            heroMsg.textContent = defaultMsg;
+
+            if (!heroInput.files.length) return;
+
+            const file = heroInput.files[0];
+            const ext = file.name.split('.').pop().toLowerCase();
+            const isVideo = ext === 'mp4' || ext === 'webm';
+            const maxBytes = (isVideo ? maxVideoMB : maxImageMB) * 1024 * 1024;
+
+            if (!allowedExt.includes(ext)) {
+                heroMsg.textContent = 'That file type isn\'t allowed. Use JPG, PNG, GIF, WEBP, MP4 or WEBM.';
+                heroMsg.classList.add('field-error');
+                heroInput.value = '';
+                return;
+            }
+
+            if (file.size > maxBytes) {
+                heroMsg.textContent = 'File is too large (max ' + (isVideo ? maxVideoMB + 'MB for video' : maxImageMB + 'MB for images') + ').';
+                heroMsg.classList.add('field-error');
+                heroInput.value = '';
+            }
+        });
+
+        heroForm.addEventListener('submit', function (e) {
+            if (!heroInput.files.length) {
+                e.preventDefault();
+                heroMsg.textContent = 'Please choose a file first.';
+                heroMsg.classList.add('field-error');
+            }
+        });
+    }
 });

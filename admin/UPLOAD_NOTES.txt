@@ -1,0 +1,24 @@
+Hero background upload — notes
+================================
+
+Where files are saved:
+  admin/uploads/hero/   (random filenames, originals are never kept)
+
+Security measures already in place:
+  1. Extension whitelist: jpg, jpeg, png, gif, webp, mp4, webm only.
+     Everything else (.pdf, .js, .xml, .csv, .php, etc.) is rejected.
+  2. Real content-type check (finfo) — a script renamed to ".jpg" is
+     still rejected because we check the actual file bytes, not the name.
+  3. Uploaded images are also verified with getimagesize() to confirm
+     they're genuinely decodable images.
+  4. Files are saved with a random 32-char name — the original filename
+     is never trusted or reused.
+  5. admin/uploads/.htaccess blocks PHP execution and directory listing
+     inside the uploads folder, as a second layer of defense.
+  6. Size limits: 8MB for images, 60MB for videos.
+
+If large video uploads fail with a blank/500 error, your server's PHP
+config may be capping it lower than 60MB. In php.ini (or a .user.ini /
+.htaccess override) increase:
+  upload_max_filesize = 64M
+  post_max_size = 64M

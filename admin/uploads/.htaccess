@@ -1,0 +1,18 @@
+# Prevent any script execution inside the uploads folder — defense in depth
+# even though the upload handler already whitelists file types strictly.
+
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+<FilesMatch "\.(php|phtml|php\d|pht|phar|cgi|pl|py|sh|exe|asp|aspx|jsp)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes -ExecCGI
